@@ -1,8 +1,8 @@
-# Frontened  Web Development Practice (HTML & JavaScript)
+# Frontend dev Development Practice (HTML & JavaScript)
 
 ## 📌 Overview
 
-This repository contains practice exercises and mini projects developed while learning **Full Stack Web Development**. The focus of this project is on understanding the fundamentals of **HTML and JavaScript** and applying them through hands-on examples.
+This repository contains practice exercises and mini projects developed while learning **Frontened dev Development**. The focus of this project is on understanding the fundamentals of **HTML and JavaScript** and applying them thro ugh hands-on examples.
 
 The repository includes multiple HTML programs, form implementations, multimedia examples, and JavaScript scripts that demonstrate basic web development concepts and interactive webpage behavior.
 
