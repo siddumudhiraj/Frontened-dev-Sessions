@@ -1,4 +1,4 @@
-# Full Stack Web Development Practice (HTML & JavaScript)
+# Frontened  Web Development Practice (HTML & JavaScript)
 
 ## 📌 Overview
 
