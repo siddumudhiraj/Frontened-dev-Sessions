@@ -55,7 +55,7 @@ To run any Angular-based session locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/frontend-dev-sessions.git
+git clone https://github.com/siddumudhiraj/Frontened-dev-Sessions.git
 cd frontend-dev-sessions/<session-folder>
 
 # Install dependencies
@@ -84,9 +84,9 @@ This repository serves as both a **learning log** and a **portfolio artifact**, 
 
 Feel free to reach out or connect for feedback and opportunities:
 
-- **LinkedIn:** [Your LinkedIn URL]
-- **Email:** [Your Email]
-- **Portfolio:** [Your Portfolio URL]
+- **LinkedIn:** [https://www.linkedin.com/in/vakiti-siddu-440a23300/]
+- **Email:** [siddumudiraj789@gmail.com]
+- **Portfolio:** [https://personal-portfolio-orpin-three-71.vercel.app/]
 
 ---
 
