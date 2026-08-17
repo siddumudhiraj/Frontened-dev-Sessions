@@ -1,4 +1,4 @@
-# Frontend dev Development Practice (HTML & JavaScript)
+# Frontend dev Development Practice (HTML , CSS & JavaScript)
 
 ## 📌 Overview
 
