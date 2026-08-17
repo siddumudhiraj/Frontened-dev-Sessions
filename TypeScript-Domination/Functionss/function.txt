@@ -1,0 +1,85 @@
+1. Function Declaration (Most Common)
+function functionName(parameters): returnType {
+    // code
+}
+
+Example
+function sum(a: number, b:number) : number {
+    return a + b;
+}
+console.log(sum(10,20));
+
+2. Function Expression
+const add = function(a: number , b: number) : number{
+    return a + b;
+}
+console.log(add(3,4));
+
+3. Arrow Function (Very Popular)
+**const add = function(a: number, b: number): number =>{
+    return a + b;
+}
+**const add = function(a: number, b: number): number => a+b;
+console.log(add(4,5));
+
+4. Function with No Parameters
+function sayHello(): void {
+    console.log("hello");
+}
+
+5. Function with optional Parameters
+function greet(name?: string) : void {
+    if(greet){
+        console.log("Hello" + name);
+    }else{
+        console.log("Hello Guest");
+    }
+}
+greet();/ greet("siddu");
+output: Hello Guest / Hello siddu
+
+
+6. Default Parameters
+function greet(name: string = "Guest"): void {
+        console.log("hello" + name);
+}
+greet();/ greet("siddu");
+output: hello Guest / hello siddu
+
+7. Rest Parameters
+function sum(...nums : number[]): number {
+    let total = 0; 
+    for(num of nums){
+        num += total;
+    }
+    return total;
+}
+console.log(sum(1,2,3,4,5));
+
+
+8. Function returning a string
+function getName(): string {
+    console.log("siddu");
+}
+console.log(getName());
+
+
+9. Fuction returning an object
+function getDetails(): {name: string, age: number}{
+    return {
+        name: "siddu"
+        age: 45;
+    }
+}
+console.log(getDetails());
+
+
+10. Function Type
+let operation: (a: number, b: number) => number;
+operation = (x, y) => (x*y);
+console.log(operation(4,5));
+
+11.Anonymous function
+setTimeOut(function(){
+    console.log("hello");
+}, 100);

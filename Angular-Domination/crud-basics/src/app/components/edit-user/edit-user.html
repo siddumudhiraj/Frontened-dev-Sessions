@@ -1,0 +1,14 @@
+<h2>Edit User</h2>
+
+    <form [formGroup]="userform" (ngSubmit)="edituser()">
+    <input type="text" placeholder="Enter your name " formControlName="name">
+    <br><br>
+
+    <input type="text"  placeholder="Enter your age " formControlName="age">
+    <br><br>
+
+    <input type="text" placeholder="Enter your email " formControlName="email">
+    <br><br>
+
+    <button type="submit">Update</button>
+    </form>

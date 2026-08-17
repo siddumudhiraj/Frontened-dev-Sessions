@@ -1,0 +1,14 @@
+<p>todoo works!</p>
+<h1>To-Do List</h1>
+<ul>
+    <input type="text" [value]="newTask()" 
+    (input)="newTask.set($event.target.value)" placeholder="Enter the Task">
+    <button (click)="AddTask()">Add Task</button>
+    @for (task of tasks(); track task.id) {
+    <li class="task-list">
+        <span>{{$index+1}}</span><span>{{task.title}}</span>
+        <span><button (click)="deleteTask(task.id)">Delete Task</button></span>
+    </li>
+
+    }
+</ul>

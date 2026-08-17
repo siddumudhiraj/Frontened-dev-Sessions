@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Counter App — dark glass panel with an LCD-style digit readout
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Inter:wght@500;600;700&display=swap');
+
+.main {
+  --bg-deep: #0a0e17;
+  --bg-deep-2: #10182a;
+  --glass-surface: rgba(255, 255, 255, 0.045);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --display-bg: #060a12;
+  --display-border: rgba(94, 234, 212, 0.25);
+  --digit-color: #5eead4;
+  --digit-glow: rgba(94, 234, 212, 0.45);
+  --text-primary: #e7ebf3;
+  --text-muted: #838fa3;
+  --accent-increment: #34d399;
+  --accent-increment-glow: rgba(52, 211, 153, 0.4);
+  --accent-decrement: #fb7185;
+  --accent-decrement-glow: rgba(251, 113, 133, 0.4);
+  --accent-reset: #93a1b8;
+  --radius-lg: 22px;
+  --radius-md: 14px;
+
+  box-sizing: border-box;
+  max-width: 360px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background:
+    radial-gradient(120% 140% at 50% -10%, rgba(94, 234, 212, 0.08), transparent 60%),
+    linear-gradient(180deg, var(--bg-deep-2), var(--bg-deep));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 20px 50px -20px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.main *,
+.main *::before,
+.main *::after {
+  box-sizing: border-box;
+}
+
+.main h2 {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ---- LCD-style digit readout ------------------------------------------- */
+
+.function {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-family: 'JetBrains Mono', 'SFMono-Regular', monospace;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--digit-color);
+  background: var(--display-bg);
+  border: 1px solid var(--display-border);
+  border-radius: var(--radius-md);
+  text-shadow: 0 0 18px var(--digit-glow), 0 0 2px var(--digit-glow);
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.02);
+  animation: idle-glow 4s ease-in-out infinite;
+}
+
+@keyframes idle-glow {
+  0%, 100% { box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.02), 0 0 0 transparent; }
+  50%      { box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.02), 0 0 24px var(--digit-glow); }
+}
+
+/* ---- Controls ------------------------------------------------------------ */
+
+.operations {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.operations button {
+  flex: 1;
+  padding: 0.85rem 0;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--glass-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.2s ease, border-color 0.2s ease,
+    color 0.2s ease, background 0.2s ease;
+}
+
+.operations button:focus-visible {
+  outline: 2px solid var(--digit-color);
+  outline-offset: 2px;
+}
+
+.operations button:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+/* Decrement — first button */
+.operations button:nth-child(1) {
+  color: var(--accent-decrement);
+}
+.operations button:nth-child(1):hover {
+  border-color: var(--accent-decrement);
+  background: rgba(251, 113, 133, 0.08);
+  box-shadow: 0 0 18px var(--accent-decrement-glow);
+}
+
+/* Reset — second button, quiet/neutral */
+.operations button:nth-child(2) {
+  color: var(--accent-reset);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.operations button:nth-child(2):hover {
+  border-color: var(--accent-reset);
+  background: rgba(147, 161, 184, 0.08);
+}
+
+/* Increment — third button, primary action */
+.operations button:nth-child(3) {
+  color: var(--accent-increment);
+}
+.operations button:nth-child(3):hover {
+  border-color: var(--accent-increment);
+  background: rgba(52, 211, 153, 0.08);
+  box-shadow: 0 0 18px var(--accent-increment-glow);
+}
+
+@media (max-width: 420px) {
+  .main {
+    margin: 1.25rem;
+    padding: 2rem 1.25rem 1.5rem;
+  }
+  .function {
+    font-size: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .function {
+    animation: none;
+  }
+  .operations button {
+    transition: none;
+  }
+}

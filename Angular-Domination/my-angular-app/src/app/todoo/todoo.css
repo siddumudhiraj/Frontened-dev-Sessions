@@ -1,0 +1,7 @@
+.task-list{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    border-bottom: 1px solid #ccc;
+}

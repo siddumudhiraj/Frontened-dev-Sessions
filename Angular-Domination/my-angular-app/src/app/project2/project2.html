@@ -1,0 +1,42 @@
+<!-- <p>Value: {{name()}}</p>
+<input type="text" [value]="name()" (input)="setValue($event.target.value)">
+<button (click)="reset()">reset</button> -->
+
+<h1>Login details</h1>
+<div>
+    @if (isLogin()) {
+        <span>Welcome user, login</span>
+        <button (click)="login(false)">Login</button>
+    }@else {
+        <p>Logout</p>
+        <button (click)="login(true)">Logout</button>
+    }
+</div>
+<hr />
+@if (show()) {
+
+    <button (click)="show.set(false)">Show</button>
+}@else {
+
+    <button (click)="show.set(true)">Hide</button>
+}
+<hr>
+<h2>check status</h2>
+<select (change)="handleStatus($event)" name="" id="">
+    <option value="not started">Not Started</option>
+    <option value="progress">In progress</option>
+    <option value="success">Success</option>
+    <option value="error">Error</option>
+</select>
+<br>
+@if (status() == "not started") {
+    <span>Not started</span>
+}@else if (status() == "progress") {
+    <span style="color: orange;">In progress</span> 
+
+}@else if (status() == "success") {
+    <span style="color: green;">Success</span> 
+
+}@else if(status() == "error") {
+    <span style="color: red;">Error</span> 
+}

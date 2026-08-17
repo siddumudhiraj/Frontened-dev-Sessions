@@ -1,0 +1,10 @@
+<H1>Reactive Forms</H1>
+ 
+<input type="text" placeholder="Enter your Email Id" [formControl]="email">
+<br><br>
+<input type="password" placeholder="Enter your password" [formControl]="password">
+<br><br>
+
+<button (click)="onLogin()">login</button>
+<hr>
+<button (click)="reset()">reset</button> 

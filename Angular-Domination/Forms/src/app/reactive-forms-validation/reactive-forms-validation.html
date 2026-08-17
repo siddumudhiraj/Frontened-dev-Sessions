@@ -1,0 +1,31 @@
+<h1>Reactive Forms grouping</h1>
+
+<form method="post" [formGroup]="loginForm" (ngSubmit) = "handleProfile()">
+    <input type="text" formControlName="name" placeholder="enter your name">
+    @if (name?.hasError('required') && name?.touched) {
+        <span class="error">This field is required</span>
+    }
+     @if (name?.errors?.['maxlength'] && name?.touched) {
+        <span class="error">Invalid name</span>
+    }
+    <br><br>
+    <input type="text" formControlName="email" placeholder="enter your email">
+    @if (email?.hasError('required') && email?.touched) {
+        <span class="error">This field is required</span>
+    }
+    @if (email?.errors?.['email'] && email?.touched) {
+        <span class="error">Invalid email</span>
+    }
+    <br><br>
+    <input type="password" formControlName="password" placeholder="enter your password">
+    @if (password?.hasError('required') && password?.touched) {
+        <span class="error">This field is required</span>
+    }
+    @if (password?.errors?.['minlength'] && password?.touched) {
+        <span class="error">Invalid Password</span>
+    }
+    <br><br>
+    <button [disabled]="loginForm.invalid">submit</button>
+</form>
+<br> <br>
+<button (click)="reset()">reset</button>

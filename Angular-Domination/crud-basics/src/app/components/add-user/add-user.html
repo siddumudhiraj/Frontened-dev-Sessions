@@ -1,0 +1,14 @@
+<h2>Add User</h2>
+
+    <form [formGroup]="userform" (ngSubmit)="adduser()">
+    <input type="text" placeholder="Enter your name " formControlName="name">
+    <br><br>
+
+    <input type="text"  placeholder="Enter your age " formControlName="age">
+    <br><br>
+
+    <input type="text" placeholder="Enter your email " formControlName="email">
+    <br><br>
+
+    <button type="submit">Add user</button>
+    </form>

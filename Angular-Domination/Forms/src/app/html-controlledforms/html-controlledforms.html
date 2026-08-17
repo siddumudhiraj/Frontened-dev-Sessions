@@ -1,0 +1,27 @@
+<h1>HTML driven Forms</h1>
+<ul>
+    <li>Name: {{userdetails?.username}}</li>
+    <li>password: {{userdetails?.userpassword}}</li>
+    <li>gender: {{userdetails?.gender}}</li>
+    <li>Range: {{userdetails?.range}}</li>
+</ul>
+<form #userForm="ngForm" (ngSubmit)="adduser(userForm.value)">
+<input type="text" name="username" placeholder="Enter your name" ngModel>
+<br><br>
+<input type="password" name="userpassword" placeholder="Enter your password" ngModel>
+<br><br>
+
+<select name="gender" ngModel>
+    <option value="">Select</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+</select>
+<br><br>
+
+<input type="range" name="range" ngModel>
+<br><br>
+
+<textarea name="userbio" ngModel></textarea>
+<br><br>
+<button>Add user</button>
+</form>

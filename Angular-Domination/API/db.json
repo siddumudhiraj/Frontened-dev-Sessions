@@ -1,0 +1,77 @@
+{
+  "users": [
+    {
+      "name": "Rahul Sharma",
+      "email": "rahul.sharma@example.com",
+      "age": 22,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Priya Reddy",
+      "age": 28,
+      "email": "priya.reddy@example.com"
+    },
+    {
+      "id": "3",
+      "name": "Arjun Kumar",
+      "age": 23,
+      "email": "arjun.kumar@example.com"
+    },
+    {
+      "id": "4",
+      "name": "Sneha Patel",
+      "age": 26,
+      "email": "sneha.patel@example.com"
+    },
+    {
+      "id": "5",
+      "name": "Vikram Singh",
+      "age": 30,
+      "email": "vikram.singh@example.com"
+    },
+    {
+      "id": "6",
+      "name": "Ananya Rao",
+      "age": 24,
+      "email": "ananya.rao@example.com"
+    },
+    {
+      "id": "7",
+      "name": "Kiran Reddy",
+      "age": 27,
+      "email": "kiran.reddy@example.com"
+    },
+    {
+      "id": "8",
+      "name": "Neha Verma",
+      "age": 22,
+      "email": "neha.verma@example.com"
+    },
+    {
+      "id": "9",
+      "name": "Rohit Mehta",
+      "age": 29,
+      "email": "rohit.mehta@example.com"
+    },
+    {
+      "id": "10",
+      "name": "Pooja Nair",
+      "age": 31,
+      "email": "pooja.nair@example.com"
+    },
+    {
+      "name": "VAKITI SIDDU",
+      "age": 44,
+      "email": "siddumudiraj789@gmail.com",
+      "id": "WNt-_I4eG4w"
+    },
+    {
+      "name": "VAKITI SHIVA",
+      "email": "SHIVA@gmail.com",
+      "age": 20,
+      "id": "cyF5kXcmX1I"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

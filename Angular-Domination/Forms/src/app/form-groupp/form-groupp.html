@@ -1,0 +1,13 @@
+<h1>Reactive Forms grouping</h1>
+
+<form method="post" [formGroup]="loginForm" (ngSubmit) = "handleProfile()">
+    <input type="text" formControlName="name" placeholder="enter your name">
+    <br><br>
+    <input type="text" formControlName="email" placeholder="enter your email">
+    <br><br>
+    <input type="password" formControlName="password" placeholder="enter your password">
+    <br><br>
+    <button>submit</button>
+</form>
+<br> <br>
+<button (click)="reset()">reset</button>

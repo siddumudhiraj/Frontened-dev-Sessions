@@ -1,0 +1,23 @@
+<h1>Home page</h1>
+<!-- <button (click)="profilefun()">Go to Profile Page</button> -->
+<div class="space">
+
+ <a routerLink="/profile"
+[queryParams]="{id:userData().id, name: userData().name, age: userData().age}"
+ >Go to siddu profile</a>
+
+ <a routerLink="/profile"
+[queryParams]="{id:userData1().id, name: userData1().name, age: userData1().age}"
+ >Go to shiva Profile</a>
+</div>
+ <br> <br>
+ <button (click)="gotosidduprofile()">Go to siddu's profile</button>
+ <br>
+
+ <!-- Route params -->
+
+ <a routerLink="/about/shiva">Go to about page</a>
+ <br>
+ <a [routerLink]="['about', userData().name]">Go to about page</a>
+ <br>
+ <button (click)="aboutpage()">Go to about page</button>

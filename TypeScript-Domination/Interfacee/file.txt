@@ -1,0 +1,14 @@
+1. What is an Interface in TypeScript?
+An interface is a blueprint or contract that defines the shape of an object.
+
+It tells TypeScript:
+"Any object that uses this interface must have these properties and methods."
+
+2.Interface with Functions
+Interfaces can also define methods.
+
+3.Readonly Properties
+Use readonly when a value should not change.
+
+4.Interface with Classes
+A class can follow an interface.
